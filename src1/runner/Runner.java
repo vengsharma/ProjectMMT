@@ -9,7 +9,7 @@ public class Runner {
 	
 	static WebDriver driver;
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Throwable{
 		
 		DriverUtils du = new DriverUtils();
 		
@@ -19,7 +19,7 @@ public class Runner {
 		
 	}
 
-	public static void Run() {
+	public static void Run() throws Throwable{
 
 		MakeMyTrip mmt = new MakeMyTrip();
 		

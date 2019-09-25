@@ -1,0 +1,9 @@
+User Interactions
+--------------------------------
+1. Text Box
+ - sendKeys
+ driver.findElement(By.xpath("")).sendKeys("Text to insert");
+ inserts a specific string to the element value
+ - getValue
+ driver.findElement(By.xpath("")).getAttribute("Value");
+ gets the element value to verify the inserted value

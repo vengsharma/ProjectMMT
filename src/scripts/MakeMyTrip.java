@@ -10,6 +10,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+
 public class MakeMyTrip {
 	
 	
@@ -25,10 +29,16 @@ public class MakeMyTrip {
 		
 		findFlights(driver);
 		
+
 		//end(driver);
 		
 	}
- 
+
+		end(driver);
+		
+	}
+
+
 	private void end(WebDriver driver) {
 
 		driver.quit();
@@ -40,6 +50,7 @@ public class MakeMyTrip {
 		driver.findElement(By.xpath("//input[@id='fromCity']")).click();
 		driver.findElement(By.xpath("//input[@placeholder='From']")).sendKeys("Hyderabad");
 		
+
 		String insertedFromText = driver.findElement(By.xpath("//input[@placeholder='From']")).getAttribute("value");
 		
 		System.out.println(insertedFromText);
@@ -75,5 +86,17 @@ public class MakeMyTrip {
 	}
 	
 	
+
+		String insertedText = driver.findElement(By.xpath("//input[@placeholder='From']")).getAttribute("value");
+		
+		System.out.println(insertedText);
+		
+		//Thread.sleep(1000);
+		
+		if(insertedText.equalsIgnoreCase("Hyderabad"))
+			System.out.println("insertion is good");
+		
+	}
+
 
 }

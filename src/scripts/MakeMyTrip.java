@@ -1,5 +1,8 @@
 package scripts;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 import org.openqa.selenium.By;
@@ -69,10 +72,17 @@ public class MakeMyTrip {
 		driver.findElement(By.xpath("//div[text()='MAA']")).click();
 		
 		//verify departure date
-		//String deptDate = driver.findElement(By.xpath("//input[@id='departure']")).getAttribute("value");
-        //System.out.println(deptDate);
+		String deptDate = driver.findElement(By.xpath("//input[@id='departure']")).getAttribute("value");
+        System.out.println("Date from MMT: "+deptDate);
         //Date D = new Date();
-	    //String sysDate = D.
+	    //String sysDate = D.	
+		
+		Calendar c = Calendar.getInstance();
+		DateFormat df = new SimpleDateFormat("EEEEE, dd MM yyyy");
+		String currDate = df.format(c.getTime());
+		System.out.println("Date from system: "+currDate);
+		
+		
 		
 		
 		//Click Search

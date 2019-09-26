@@ -34,10 +34,6 @@ public class MakeMyTrip {
 		
 	}
 
-		end(driver);
-		
-	}
-
 
 	private void end(WebDriver driver) {
 
@@ -82,19 +78,6 @@ public class MakeMyTrip {
 		//Click Search
 		driver.findElement(By.xpath("//a[text()='Search']")).click();
 		
-		
-	}
-	
-	
-
-		String insertedText = driver.findElement(By.xpath("//input[@placeholder='From']")).getAttribute("value");
-		
-		System.out.println(insertedText);
-		
-		//Thread.sleep(1000);
-		
-		if(insertedText.equalsIgnoreCase("Hyderabad"))
-			System.out.println("insertion is good");
 		
 	}
 
